@@ -1,0 +1,11 @@
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__item {
+    padding-right: 10px;
+    height: 18px;
+    width: 28px;
+  }
+}
