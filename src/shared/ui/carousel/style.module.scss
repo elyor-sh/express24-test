@@ -1,0 +1,30 @@
+.carousel {
+  position: relative;
+}
+
+.navigation {
+  width: 36px;
+  height: 36px;
+  margin: auto 0;
+  transition: opacity .16s ease-in-out;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgb(65 65 65 / 10%);
+  cursor: pointer;
+  background: #ffffff;
+  position: absolute;
+
+  &.prev {
+    left: 0;
+    transform: translateX(-50%);
+  }
+  &.next {
+    right: 0;
+    transform: translateX(50%);
+  }
+}
