@@ -1,5 +1,5 @@
 import React from 'react';
-import {SearchInput} from "@/shared/ui";
+import { SearchInput } from '@/shared/ui';
 
 const SearchNav = () => {
     return (
@@ -9,4 +9,4 @@ const SearchNav = () => {
     );
 };
 
-export {SearchNav}
+export { SearchNav };

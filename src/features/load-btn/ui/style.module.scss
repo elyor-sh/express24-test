@@ -1,0 +1,21 @@
+.load {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #ececf1;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background: #e5e5eb;
+  }
+
+  &:disabled {
+    cursor: auto;
+  }
+}

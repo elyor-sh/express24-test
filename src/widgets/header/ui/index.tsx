@@ -1,16 +1,16 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-import cl from './style.module.scss'
-import {Logo} from "@/shared/assets";
-import {SearchNav} from "@/features/search-nav";
-import {ProfileBtn} from "@/features/profile-btn";
-import {MapBtn} from "@/features/map-btn";
+import { Link } from 'react-router-dom';
+import cl from './style.module.scss';
+import { Logo } from '@/shared/assets';
+import { SearchNav } from '@/features/search-nav';
+import { ProfileBtn } from '@/features/profile-btn';
+import { MapBtn } from '@/features/map-btn';
 
 const Header = () => {
     return (
         <div className={cl.wrapper}>
             <div className={cl.tools}>
-                <Link to='/' className={cl.logo__wrapper}>
+                <Link to="/" className={cl.logo__wrapper}>
                     <Logo />
                 </Link>
                 <div className={cl.search}>
@@ -27,4 +27,4 @@ const Header = () => {
     );
 };
 
-export {Header}
+export { Header };

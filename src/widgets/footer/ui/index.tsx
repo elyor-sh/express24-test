@@ -1,7 +1,7 @@
 import React from 'react';
-import cl from './style.module.scss'
-import {FooterLinks} from "@/features/footer-links";
-import {Container, SocialIcons} from "@/shared/ui";
+import cl from './style.module.scss';
+import { FooterLinks } from '@/features/footer-links';
+import { Container, SocialIcons } from '@/shared/ui';
 
 const Footer = () => {
     return (
@@ -10,7 +10,8 @@ const Footer = () => {
                 <FooterLinks />
                 <div className={cl.footer__bottom}>
                     <p className={cl.footer__support}>
-                        Служба поддержки: <a href="tel:998712004001">+998 71 200 40 01</a>
+                        Служба поддержки:{' '}
+                        <a href="tel:998712004001">+998 71 200 40 01</a>
                     </p>
                     <div className={cl.footer__tools}>
                         <SocialIcons />
@@ -24,4 +25,4 @@ const Footer = () => {
     );
 };
 
-export {Footer}
+export { Footer };

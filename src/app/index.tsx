@@ -1,11 +1,9 @@
 import React from 'react';
 import './global.scss';
-import {Routing} from "@/pages";
+import { Routing } from '@/pages';
 
 const App = () => {
-    return (
-        <Routing />
-    )
+    return <Routing />;
 };
 
 export { App };
