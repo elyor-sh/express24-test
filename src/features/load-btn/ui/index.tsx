@@ -9,8 +9,6 @@ export const LoadButton = observer(() => {
 
     const loadButtonModel = getStore(LoadButtonModel)
 
-    console.log(loadButtonModel.loading)
-
     return (
         <button className={cl.load} onClick={loadButtonModel.setPage} disabled={loadButtonModel.disabledButton || loadButtonModel.loading}>
             {

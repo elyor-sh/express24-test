@@ -14,3 +14,14 @@
 .address {
   padding-left: 4px;
 }
+
+.map__container {
+  min-width: 808px;
+  max-width: 808px;
+  width: 100%;
+  position: relative;
+
+  & div {
+    position: relative;
+  }
+}
