@@ -10,6 +10,11 @@
   border-radius: 12px;
   outline: none;
   font-size: 16px;
+
+  &::placeholder {
+    color: #7B7B7B;
+    font-size: 14px;
+  }
 }
 
 .icon {

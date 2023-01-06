@@ -4,7 +4,7 @@ import cl from './style.module.scss';
 import { Logo } from '@/shared/assets';
 import { SearchNav } from '@/features/search-nav';
 import { ProfileBtn } from '@/features/profile-btn';
-import { MapBtn } from '@/features/map-btn';
+import { MapBtn } from '@/features/map';
 
 const Header = () => {
     return (
