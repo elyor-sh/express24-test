@@ -8,6 +8,7 @@ import {
 
 @singleton()
 export class RestaurantStore {
+    public coords: number[] = [41.295314330294524, 69.27438955754023]
     public loading: boolean = false;
     public page: number = 1;
     public count: number = 0;
@@ -22,7 +23,13 @@ export class RestaurantStore {
         return {
             limit: 21,
             offset: (this.page - 1) * this.offset,
+            latitude: this.coords[0],
+            longitude : this.coords[1]
         } as QueryParamsRestaurantList;
+    }
+
+    public setCoords (coords: number[]) {
+        this.coords = coords;
     }
 
     public setLoading(p: boolean) {

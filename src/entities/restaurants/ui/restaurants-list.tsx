@@ -10,6 +10,9 @@ const RestaurantsList = observer(() => {
 
     return (
         <div className={cl.list}>
+            {
+                !restaurantStore.restaurants.length && 'Рестораны не найдены...'
+            }
             {restaurantStore.restaurants.map((restaurant) => (
                 <div key={restaurant.id} className={cl.item}>
                     <RestaurantCard restaurant={restaurant} />
