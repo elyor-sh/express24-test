@@ -3,7 +3,7 @@ import { makeAutoObservable } from 'mobx';
 
 @singleton()
 export class MapModel {
-    public openModal: boolean = false;
+    public openModal = false;
 
     constructor() {
         makeAutoObservable(this, {}, { autoBind: true });

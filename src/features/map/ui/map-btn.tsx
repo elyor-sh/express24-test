@@ -1,25 +1,28 @@
-import React, {useEffect} from 'react';
+import React, { useCallback, useEffect } from 'react';
 import cl from './style.module.scss';
 import { getStore } from '@/shared/lib';
 import { MapModel } from '@/features/map';
-import {RestaurantStore} from "@/entities/restaurants";
+import { RestaurantStore } from '@/entities/restaurants';
 
 const MapBtn = () => {
     const mapModel = getStore(MapModel);
     const restaurantStore = getStore(RestaurantStore);
 
-    const showPosition = (position: GeolocationPosition) => {
-        const {latitude, longitude} = position.coords
-        restaurantStore.setCoords([latitude, longitude])
-    }
+    const showPosition = useCallback(
+        (position: GeolocationPosition) => {
+            const { latitude, longitude } = position.coords;
+            restaurantStore.setCoords([latitude, longitude]);
+        },
+        [restaurantStore]
+    );
 
     useEffect(() => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
         } else {
-            console.log("Geolocation не поддерживается");
+            console.log('Geolocation не поддерживается');
         }
-    }, [])
+    }, [showPosition]);
 
     return (
         <button

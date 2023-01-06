@@ -2,8 +2,7 @@ import React, { ButtonHTMLAttributes } from 'react';
 import cl from './style.module.scss';
 import { cn } from '@/shared/lib';
 
-export interface FavoriteBtnProps
-    extends ButtonHTMLAttributes<HTMLButtonElement> {}
+export type FavoriteBtnProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
 const FavoriteBtn = ({ ...rest }: FavoriteBtnProps) => {
     return (

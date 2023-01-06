@@ -6,7 +6,7 @@ export interface ModalProps {
     children?: React.ReactNode;
     active: boolean;
     onClose: () => void;
-    title?: React.ReactNode
+    title?: React.ReactNode;
 }
 
 export const Modal = ({ children, active, onClose, title }: ModalProps) => {
@@ -19,9 +19,7 @@ export const Modal = ({ children, active, onClose, title }: ModalProps) => {
                 className={cl.modal__content}
                 onClick={(e) => e.stopPropagation()}
             >
-                {
-                    title && <div>{title}</div>
-                }
+                {title && <div>{title}</div>}
                 <button onClick={onClose} className={cl.modal__close}>
                     <svg
                         width="16"
