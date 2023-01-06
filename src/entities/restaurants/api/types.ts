@@ -35,8 +35,8 @@ export type ApiGetRestaurantListType = {
 };
 
 export type QueryParamsRestaurantList = {
-    limit?: number
-    offset?: number
-    latitude?: number
-    longitude?: number
-}
+    limit?: number;
+    offset?: number;
+    latitude?: number;
+    longitude?: number;
+};

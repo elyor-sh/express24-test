@@ -1,2 +1,2 @@
-export * from './map-btn'
-export * from './map-modal'
+export * from './map-btn';
+export * from './map-modal';

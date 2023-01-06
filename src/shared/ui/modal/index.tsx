@@ -34,9 +34,7 @@ export const Modal = ({ children, active, onClose }: ModalProps) => {
                         />
                     </svg>
                 </button>
-                <div className={cl.modal__main}>
-                    {children}
-                </div>
+                <div className={cl.modal__main}>{children}</div>
             </div>
         </div>
     );

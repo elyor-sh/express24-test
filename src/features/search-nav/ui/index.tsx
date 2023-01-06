@@ -4,7 +4,7 @@ import { SearchInput } from '@/shared/ui';
 const SearchNav = () => {
     return (
         <div>
-            <SearchInput placeholder='Заведение, блюдо, товар или кухня'/>
+            <SearchInput placeholder="Заведение, блюдо, товар или кухня" />
         </div>
     );
 };

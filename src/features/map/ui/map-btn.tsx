@@ -1,14 +1,16 @@
 import React from 'react';
 import cl from './style.module.scss';
-import {getStore} from "@/shared/lib";
-import {MapModel} from "@/features/map";
+import { getStore } from '@/shared/lib';
+import { MapModel } from '@/features/map';
 
 const MapBtn = () => {
-
-    const mapModel = getStore(MapModel)
+    const mapModel = getStore(MapModel);
 
     return (
-        <button className={cl.button} onClick={() => mapModel.setOpenModal(true)}>
+        <button
+            className={cl.button}
+            onClick={() => mapModel.setOpenModal(true)}
+        >
             <svg
                 width="20"
                 height="20"

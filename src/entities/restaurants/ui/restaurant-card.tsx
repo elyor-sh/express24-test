@@ -1,6 +1,6 @@
 import React from 'react';
 import cl from './style.module.scss';
-import {Card, FavoriteBtn} from '@/shared/ui';
+import { Card, FavoriteBtn } from '@/shared/ui';
 import { RestaurantType } from '@/entities/restaurants';
 import { CarIcon, StarIcon } from '@/shared/assets';
 

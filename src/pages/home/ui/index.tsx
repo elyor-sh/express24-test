@@ -1,26 +1,27 @@
-import React, {lazy, useEffect, Suspense} from 'react';
-import {observer} from "mobx-react-lite";
+import React, { lazy, useEffect, Suspense } from 'react';
+import { observer } from 'mobx-react-lite';
 import cl from './style.module.scss';
 import { Container, Title } from '@/shared/ui';
 import { PromoBanners } from '@/features/promo-banners';
 import { ShopsCarousel } from '@/entities/shops';
-import {RestaurantsList, RestaurantStore} from '@/entities/restaurants';
-import {LoadButton} from "@/features/load-btn";
-import {getStore} from "@/shared/lib";
+import { RestaurantsList, RestaurantStore } from '@/entities/restaurants';
+import { LoadButton } from '@/features/load-btn';
+import { getStore } from '@/shared/lib';
 
-const LazyModalMap = lazy(() => import('../../../features/map').then(res => ({default: res.MapModal})))
+const LazyModalMap = lazy(() =>
+    import('../../../features/map').then((res) => ({ default: res.MapModal }))
+);
 
 const Home = observer(() => {
-
-    const restaurantStore = getStore(RestaurantStore)
+    const restaurantStore = getStore(RestaurantStore);
 
     useEffect(() => {
-        if(restaurantStore.page > 1){
+        if (restaurantStore.page > 1) {
             (async () => {
-                await restaurantStore.loadRestaurants()
-            })()
+                await restaurantStore.loadRestaurants();
+            })();
         }
-    }, [restaurantStore, restaurantStore.page])
+    }, [restaurantStore, restaurantStore.page]);
 
     return (
         <>
